@@ -46,16 +46,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Core\InputCondition.cs" />
+     <Compile Include="Assets\Scripts\Conditions\InputCondition.cs" />
+     <Compile Include="Assets\Scripts\Core\PaintProcessEnums.cs" />
+     <Compile Include="Assets\Scripts\Core\aActOnSound.cs" />
      <Compile Include="Assets\Scripts\Core\aCondition.cs" />
      <Compile Include="Assets\Scripts\Core\aEffect.cs" />
      <Compile Include="Assets\Scripts\Core\iCanMakeSound.cs" />
      <Compile Include="Assets\Scripts\Core\iCanPaint.cs" />
+     <Compile Include="Assets\Scripts\Core\iFindComponents.cs" />
      <Compile Include="Assets\Scripts\Core\iFindInChildren.cs" />
+     <Compile Include="Assets\Scripts\Core\iTestCondition.cs" />
+     <Compile Include="Assets\Scripts\Effects\ChangeAnimatorParameter.cs" />
+     <Compile Include="Assets\Scripts\Effects\ChangePitch.cs" />
      <Compile Include="Assets\Scripts\Effects\CreateSound.cs" />
+     <Compile Include="Assets\Scripts\Effects\GameObjectShowAmong.cs" />
+     <Compile Include="Assets\Scripts\Effects\GameObjectShowThis.cs" />
+     <Compile Include="Assets\Scripts\Effects\PlaySound.cs" />
+     <Compile Include="Assets\Scripts\Effects\StopSound.cs" />
+     <Compile Include="Assets\Scripts\Structure\DelayDestroy.cs" />
+     <Compile Include="Assets\Scripts\Structure\DestroySoundWhenNotPlaying.cs" />
+     <Compile Include="Assets\Scripts\Structure\DirectionMain.cs" />
+     <Compile Include="Assets\Scripts\Structure\DirectionPart.cs" />
      <Compile Include="Assets\Scripts\Structure\Paint.cs" />
-     <Compile Include="Assets\Scripts\Structure\Scenario.cs" />
-     <Compile Include="Assets\Scripts\Structure\ScenarioPart.cs" />
      <Compile Include="Assets\Scripts\Structure\SuperCondition.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

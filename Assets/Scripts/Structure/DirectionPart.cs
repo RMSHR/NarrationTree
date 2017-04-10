@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScenarioPart : MonoBehaviour, iFindInChildren {
+public class DirectionPart : MonoBehaviour, iFindInChildren, iTestCondition {
 
-	public List<SuperCondition> superConditions;
+	protected List<SuperCondition> superConditions;
 	
 	void Awake() {
 		FindInChildren();
@@ -20,5 +20,16 @@ public class ScenarioPart : MonoBehaviour, iFindInChildren {
 		{
 			superConditions.Add(s);
 		}
+	}
+	
+	public bool TestCondition()
+	{
+		foreach(SuperCondition superCondition in superConditions)
+		{
+			if(superCondition.TestCondition())
+				superCondition.ActiveEffects();
+		}
+		
+		return true;
 	}
 }

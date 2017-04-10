@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class aCondition : MonoBehaviour, iFindInChildren {
-
+public abstract class aCondition : MonoBehaviour, iTestCondition {
+	
+	// TODO : How to use a float value and not only a bool value ?
+	/*
 	public enum ConditionOutEnum 
 	{
 		isBool,
@@ -12,23 +14,10 @@ public abstract class aCondition : MonoBehaviour, iFindInChildren {
 	}
 	
 	public ConditionOutEnum conditionOut = ConditionOutEnum.isBool;
+	*/
 	
-	public List<aEffect> effects;
-	
-	protected virtual void Awake() 
+	public virtual bool TestCondition()
 	{
-		FindInChildren();
-	}
-	
-	public void FindInChildren()
-	{
-		aEffect[] _effects = GetComponentsInChildren<aEffect>();
-		
-		effects = new List<aEffect>();
-		
-		foreach(aEffect e in _effects)
-		{
-			effects.Add(e);
-		}
+		return true;
 	}
 }

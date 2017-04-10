@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Paint : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+	protected MeshRenderer _meshRenderer;
+	protected Animator _animator;
 	
-	// Update is called once per frame
-	void Update () {
-		
+	void Awake() {
+		_animator = GetComponent<Animator>();
+		_meshRenderer = GetComponent<MeshRenderer>();
 	}
 }

@@ -6,11 +6,17 @@ public class aEffect : MonoBehaviour {
 
 	public aEffect nextEffect;
 	
-	public virtual void PlayNextEffect()
-	{
-		if(nextEffect != null) nextEffect.enabled = true;
+	protected virtual void Awake() {
+		// Effect should not be active at the begining
 		enabled = false;
 	}
 	
-	protected virtual void OnEnable(){}
+	public virtual void PlayEffect(){}
+	
+	public virtual void PlayNextEffect()
+	{
+		// active next, desactive self
+		if(nextEffect != null) nextEffect.enabled = true;
+		enabled = false;
+	}
 }
