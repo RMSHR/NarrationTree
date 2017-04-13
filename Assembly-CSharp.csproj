@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\PaintProcessScripts\Conditions\InputCondition.cs" />
+     <Compile Include="Assets\PaintProcessScripts\Conditions\RandomTimerCondition.cs" />
      <Compile Include="Assets\PaintProcessScripts\Conditions\StoreAskEqual.cs" />
      <Compile Include="Assets\PaintProcessScripts\Conditions\StoreAskNotEqual.cs" />
      <Compile Include="Assets\PaintProcessScripts\Conditions\TimerCondition.cs" />
@@ -71,6 +72,7 @@
      <Compile Include="Assets\PaintProcessScripts\Effects\GameObject\GameObjectShowAmong.cs" />
      <Compile Include="Assets\PaintProcessScripts\Effects\GameObject\GameObjectShowThis.cs" />
      <Compile Include="Assets\PaintProcessScripts\Effects\GameObject\Instantiate.cs" />
+     <Compile Include="Assets\PaintProcessScripts\Effects\GameObject\InstantiateRandom.cs" />
      <Compile Include="Assets\PaintProcessScripts\Effects\Sound\ChangePitch.cs" />
      <Compile Include="Assets\PaintProcessScripts\Effects\Sound\CreateSound.cs" />
      <Compile Include="Assets\PaintProcessScripts\Effects\Sound\PlaySound.cs" />
