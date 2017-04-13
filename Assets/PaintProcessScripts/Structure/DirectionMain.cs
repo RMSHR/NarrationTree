@@ -43,11 +43,16 @@ namespace PaintProcess {
 		
 		public void ChangePart(int _newPart)
 		{
+			parts[activePart].gameObject.SetActive(false);
+			
 			activePart = _newPart;
+			
+			parts[activePart].gameObject.SetActive(true);
 		}
 		
-		public void NextPart(){
-			activePart++;
+		public void NextPart()
+		{
+			ChangePart(activePart + 1);
 		}
 	}
 }

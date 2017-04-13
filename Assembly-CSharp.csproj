@@ -50,7 +50,11 @@
      <Compile Include="Assets\PaintProcessScripts\Conditions\InputCondition.cs" />
      <Compile Include="Assets\PaintProcessScripts\Conditions\RandomTimerCondition.cs" />
      <Compile Include="Assets\PaintProcessScripts\Conditions\StoreAskEqual.cs" />
+     <Compile Include="Assets\PaintProcessScripts\Conditions\StoreAskInferior.cs" />
+     <Compile Include="Assets\PaintProcessScripts\Conditions\StoreAskInferiorOrEqual.cs" />
      <Compile Include="Assets\PaintProcessScripts\Conditions\StoreAskNotEqual.cs" />
+     <Compile Include="Assets\PaintProcessScripts\Conditions\StoreAskSuperior.cs" />
+     <Compile Include="Assets\PaintProcessScripts\Conditions\StoreAskSuperiorOrEqual.cs" />
      <Compile Include="Assets\PaintProcessScripts\Conditions\TimerCondition.cs" />
      <Compile Include="Assets\PaintProcessScripts\Core\EditorPaintProcess.cs" />
      <Compile Include="Assets\PaintProcessScripts\Core\PaintProcessEnums.cs" />
@@ -78,6 +82,7 @@
      <Compile Include="Assets\PaintProcessScripts\Effects\Sound\CreateSound.cs" />
      <Compile Include="Assets\PaintProcessScripts\Effects\Sound\PlaySound.cs" />
      <Compile Include="Assets\PaintProcessScripts\Effects\Sound\StopSound.cs" />
+     <Compile Include="Assets\PaintProcessScripts\Effects\Sprite\ChangeSprite.cs" />
      <Compile Include="Assets\PaintProcessScripts\Effects\Store\StoreAdd.cs" />
      <Compile Include="Assets\PaintProcessScripts\Effects\Store\StoreDivide.cs" />
      <Compile Include="Assets\PaintProcessScripts\Effects\Store\StoreMultiply.cs" />

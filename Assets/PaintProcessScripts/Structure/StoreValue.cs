@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace PaintProcess {
 	
+	[DisallowMultipleComponent]
 	[AddComponentMenu("Paint/Structure/Store Value")]
 	public class StoreValue : MonoBehaviour {
 
