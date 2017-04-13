@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[AddComponentMenu("Paint/Structure/Destroy sound when not playing")]
 public class DestroySoundWhenNotPlaying : MonoBehaviour {
 
 	AudioSource _source;

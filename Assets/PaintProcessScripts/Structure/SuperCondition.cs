@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[DisallowMultipleComponent]
+[AddComponentMenu("Paint/Structure/Super Condition")]
 public class SuperCondition : MonoBehaviour, iFindComponents, iFindInChildren, iTestCondition {
+
+	public int limitNumber = -1;
+	
+	private int activationCounter = 0;
 
 	protected List<aCondition> childConditions;
 	
@@ -50,18 +56,29 @@ public class SuperCondition : MonoBehaviour, iFindComponents, iFindInChildren, i
 		return true;
 	}
 	
-	public void ActiveFirstEffect()
-	{
-		effects[0].PlayEffect();
-		effects[0].PlayNextEffect();
-		
-		// TODO : increment effect id to play
-	}
-	
 	public void ActiveEffects() {
+		if(!CanPlayEffect())
+			return;
+		
 		foreach(aEffect effect in effects)
 		{
 			effect.PlayEffect();
+		}
+	}
+	
+	// depends on limitNumber : can play unlimited time an effect or a precise number of time
+	bool CanPlayEffect() {
+		if(limitNumber <= 0)
+			return true;
+		else
+		{
+			if(activationCounter < limitNumber)
+			{
+				activationCounter++;
+				return true;
+			}
+			else
+				return false;
 		}
 	}
 }

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[AddComponentMenu("Paint/Core/(abstract) Condition")]
+[RequireComponent(typeof(SuperCondition))]
 public abstract class aCondition : MonoBehaviour, iTestCondition {
 	
 	// TODO : How to use a float value and not only a bool value ?

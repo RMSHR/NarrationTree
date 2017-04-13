@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[AddComponentMenu("Paint/Effects/Animator/Change Parameter")]
 public class ChangeAnimatorParameter : aEffect {
 
 	public enum ParameterTypeEnum {Float, Int, Bool, Trigger};

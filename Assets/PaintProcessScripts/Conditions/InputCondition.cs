@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[AddComponentMenu("Paint/Conditions/Input")]
 public class InputCondition : aCondition {
 
 	public enum KeyModeEnum {

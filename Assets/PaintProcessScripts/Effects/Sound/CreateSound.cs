@@ -5,6 +5,7 @@ using UnityEngine;
 public class CreateSound : aEffect, iCanMakeSound {
 	
 	public AudioClip clip;
+	public float startPitch = 1f;
 
 	public override void PlayEffect()
 	{
@@ -22,6 +23,7 @@ public class CreateSound : aEffect, iCanMakeSound {
 		AudioSource _source = _g.AddComponent<AudioSource>();
 		_g.AddComponent<DestroySoundWhenNotPlaying>();
 		_source.clip = _clip;
+		_source.pitch = startPitch;
 		_source.Play();
 	}
 }

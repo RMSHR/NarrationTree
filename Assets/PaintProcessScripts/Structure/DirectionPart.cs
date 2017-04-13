@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[DisallowMultipleComponent]
+[AddComponentMenu("Paint/Structure/Direction Part")]
 public class DirectionPart : MonoBehaviour, iFindInChildren, iTestCondition {
 
 	protected List<SuperCondition> superConditions;

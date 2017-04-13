@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[DisallowMultipleComponent]
+[AddComponentMenu("Paint/Structure/Direction Main")]
 public class DirectionMain : MonoBehaviour, iFindInChildren {
 
 	private int activePart = 0;
@@ -35,5 +37,14 @@ public class DirectionMain : MonoBehaviour, iFindInChildren {
 	void Update() 
 	{
 		parts[activePart].TestCondition();
+	}
+	
+	public void ChangePart(int _newPart)
+	{
+		activePart = _newPart;
+	}
+	
+	public void NextPart(){
+		activePart++;
 	}
 }
