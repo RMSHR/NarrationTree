@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\PaintProcessScripts\Conditions\AnimatorIsStateCondition.cs" />
      <Compile Include="Assets\PaintProcessScripts\Conditions\InputCondition.cs" />
      <Compile Include="Assets\PaintProcessScripts\Conditions\RandomTimerCondition.cs" />
      <Compile Include="Assets\PaintProcessScripts\Conditions\StoreAskEqual.cs" />
