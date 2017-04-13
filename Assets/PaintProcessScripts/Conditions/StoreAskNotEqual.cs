@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[AddComponentMenu("Paint/Conditions/Store Not Equal")]
-public class StoreAskNotEqual : aStoreCountCondition {
+namespace PaintProcess {
+	
+	[AddComponentMenu("Paint/Conditions/Store Not Equal")]
+	public class StoreAskNotEqual : aStoreCountCondition {
 
-	public override bool TestCondition()
-	{
-		if(store.storedValue != valueToCompare)
-			return true;
-		else
-			return false;
+		public override bool TestCondition()
+		{
+			if(store.storedValue != valueToCompare)
+				return true;
+			else
+				return false;
+		}
 	}
+
 }

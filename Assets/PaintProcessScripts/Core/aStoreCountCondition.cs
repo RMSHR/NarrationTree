@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class aStoreCountCondition : aCondition {
+namespace PaintProcess {
+		
+	public abstract class aStoreCountCondition : aCondition {
 
-	public StoreValue store;
-	public int valueToCompare;
-	
-	void Awake() {
-		if(store == null)
-		{
-			store = GameObject.FindObjectOfType<StoreValue>();
+		public StoreValue store;
+		public int valueToCompare;
+		
+		void Awake() {
 			if(store == null)
-				Debug.LogError("Warning ! No StoreValue exist for "+gameObject.name);
+			{
+				store = GameObject.FindObjectOfType<StoreValue>();
+				if(store == null)
+					Debug.LogError("Warning ! No StoreValue exist for "+gameObject.name);
+			}
 		}
 	}
+
 }

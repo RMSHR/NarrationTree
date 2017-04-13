@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface iCanPaint {
+namespace PaintProcess {
+	
+	public interface iCanPaint {
 
-	void CreatePaint(GameObject _paint);
+		void CreatePaint(GameObject _paint);
+	}
+
 }

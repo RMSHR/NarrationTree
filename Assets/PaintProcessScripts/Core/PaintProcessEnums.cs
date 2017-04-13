@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaintProcessEnums : MonoBehaviour {
+namespace PaintProcess {
+	
+	public class PaintProcessEnums : MonoBehaviour {
 
-	public enum ChangeBoolEnum {SetTrue, SetFalse};
+		public enum ChangeBoolEnum {SetTrue, SetFalse};
+	}
+
 }

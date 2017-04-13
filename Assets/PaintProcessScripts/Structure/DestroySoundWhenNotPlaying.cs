@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[AddComponentMenu("Paint/Structure/Destroy sound when not playing")]
-public class DestroySoundWhenNotPlaying : MonoBehaviour {
+namespace PaintProcess {
+	
+	[AddComponentMenu("Paint/Structure/Destroy sound when not playing")]
+	public class DestroySoundWhenNotPlaying : MonoBehaviour {
 
-	AudioSource _source;
-	
-	void Awake() {
-		_source = GetComponent<AudioSource>();
+		AudioSource _source;
+		
+		void Awake() {
+			_source = GetComponent<AudioSource>();
+		}
+		
+		void Update () {
+			if(!_source.isPlaying)
+				Destroy(gameObject);
+		}
 	}
-	
-	void Update () {
-		if(!_source.isPlaying)
-			Destroy(gameObject);
-	}
+
 }

@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[AddComponentMenu("Paint/Core/(abstract) Act on sound")]
-public abstract class aActOnSound : aEffect {
+namespace PaintProcess {
+	
+	[AddComponentMenu("Paint/Core/(abstract) Act on sound")]
+	public abstract class aActOnSound : aEffect {
 
-	public AudioSource _audioTarget;
-	
-	
+		public AudioSource _audioTarget;
+		
+		
+	}
+
 }

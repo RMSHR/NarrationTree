@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoreAdd : aStoreChangeValue {
+namespace PaintProcess {
 	
-	public override void PlayEffect()
-	{
-		base.PlayEffect();
+	public class StoreAdd : aStoreChangeValue {
 		
-		store.storedValue += value;
+		public override void PlayEffect()
+		{
+			base.PlayEffect();
+			
+			store.storedValue += value;
+		}
 	}
+
 }

@@ -2,36 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[DisallowMultipleComponent]
-[AddComponentMenu("Paint/Structure/Direction Part")]
-public class DirectionPart : MonoBehaviour, iFindInChildren, iTestCondition {
+namespace PaintProcess {
+		
+	[DisallowMultipleComponent]
+	[AddComponentMenu("Paint/Structure/Direction Part")]
+	public class DirectionPart : MonoBehaviour, iFindInChildren, iTestCondition {
 
-	protected List<SuperCondition> superConditions;
-	
-	void Awake() {
-		FindInChildren();
-	}
-	
-	public void FindInChildren()
-	{
-		SuperCondition[] _superConditions = GetComponentsInChildren<SuperCondition>();
+		protected List<SuperCondition> superConditions;
 		
-		superConditions = new List<SuperCondition>();
-		
-		foreach(SuperCondition s in _superConditions)
-		{
-			superConditions.Add(s);
-		}
-	}
-	
-	public bool TestCondition()
-	{
-		foreach(SuperCondition superCondition in superConditions)
-		{
-			if(superCondition.TestCondition())
-				superCondition.ActiveEffects();
+		void Awake() {
+			FindInChildren();
 		}
 		
-		return true;
+		public void FindInChildren()
+		{
+			SuperCondition[] _superConditions = GetComponentsInChildren<SuperCondition>();
+			
+			superConditions = new List<SuperCondition>();
+			
+			foreach(SuperCondition s in _superConditions)
+			{
+				superConditions.Add(s);
+			}
+		}
+		
+		public bool TestCondition()
+		{
+			foreach(SuperCondition superCondition in superConditions)
+			{
+				if(superCondition.TestCondition())
+					superCondition.ActiveEffects();
+			}
+			
+			return true;
+		}
 	}
+
 }

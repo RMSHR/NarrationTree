@@ -2,28 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreateSound : aEffect, iCanMakeSound {
-	
-	public AudioClip clip;
-	public float startPitch = 1f;
+namespace PaintProcess {
+		
+	public class CreateSound : aEffect, iCanMakeSound {
+		
+		public AudioClip clip;
+		public float startPitch = 1f;
 
-	public override void PlayEffect()
-	{
-		base.PlayEffect();
+		public override void PlayEffect()
+		{
+			base.PlayEffect();
+			
+			CreateNewSound(clip);
+		}
 		
-		CreateNewSound(clip);
+		public void CreateNewSound(AudioClip _clip)
+		{
+			// create new gameobject with AudioSource and the chosen clip
+			
+			GameObject _g = new GameObject();
+			_g.name = "Sound ["+clip.name+"]";
+			AudioSource _source = _g.AddComponent<AudioSource>();
+			_g.AddComponent<DestroySoundWhenNotPlaying>();
+			_source.clip = _clip;
+			_source.pitch = startPitch;
+			_source.Play();
+		}
 	}
-	
-	public void CreateNewSound(AudioClip _clip)
-	{
-		// create new gameobject with AudioSource and the chosen clip
-		
-		GameObject _g = new GameObject();
-		_g.name = "Sound ["+clip.name+"]";
-		AudioSource _source = _g.AddComponent<AudioSource>();
-		_g.AddComponent<DestroySoundWhenNotPlaying>();
-		_source.clip = _clip;
-		_source.pitch = startPitch;
-		_source.Play();
-	}
+
 }

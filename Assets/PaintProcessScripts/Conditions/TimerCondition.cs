@@ -2,27 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[AddComponentMenu("Paint/Conditions/Counter")]
-public class TimerCondition : aCondition {
+namespace PaintProcess {
+		
+	[AddComponentMenu("Paint/Conditions/Counter")]
+	public class TimerCondition : aCondition {
 
-	public float delay = 1f;
-	public bool repeatCounter = false;
-	
-	protected float counter;
-	
-	void Update () {
-		counter += Time.deltaTime;
-	}
-	
-	public override bool TestCondition() {
-		if(counter >= delay)
-		{
-			if(repeatCounter)
-				counter = 0f;
-			
-			return true;
+		public float delay = 1f;
+		public bool repeatCounter = false;
+		
+		protected float counter;
+		
+		void Update () {
+			counter += Time.deltaTime;
 		}
-		else
-			return false;
+		
+		public override bool TestCondition() {
+			if(counter >= delay)
+			{
+				if(repeatCounter)
+					counter = 0f;
+				
+				return true;
+			}
+			else
+				return false;
+		}
 	}
+
 }

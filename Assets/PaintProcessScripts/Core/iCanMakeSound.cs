@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface iCanMakeSound  {
+namespace PaintProcess {
 	
-	void CreateNewSound(AudioClip _clip);
+	public interface iCanMakeSound  {
+		
+		void CreateNewSound(AudioClip _clip);
+	}
+
 }

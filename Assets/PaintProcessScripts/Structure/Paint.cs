@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Paint : MonoBehaviour {
-
-	protected MeshRenderer _meshRenderer;
-	protected Animator _animator;
+namespace PaintProcess {
 	
-	void Awake() {
-		_animator = GetComponent<Animator>();
-		_meshRenderer = GetComponent<MeshRenderer>();
+	public class Paint : MonoBehaviour {
+
+		protected MeshRenderer _meshRenderer;
+		protected Animator _animator;
+		
+		void Awake() {
+			_animator = GetComponent<Animator>();
+			_meshRenderer = GetComponent<MeshRenderer>();
+		}
 	}
+
 }

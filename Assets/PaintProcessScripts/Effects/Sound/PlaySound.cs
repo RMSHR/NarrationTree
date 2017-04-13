@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaySound : aActOnSound {
+namespace PaintProcess {
 	
-	public override void PlayEffect()
-	{
-		base.PlayEffect();
+	public class PlaySound : aActOnSound {
 		
-		_audioTarget.Play();
+		public override void PlayEffect()
+		{
+			base.PlayEffect();
+			
+			_audioTarget.Play();
+		}
 	}
+
 }

@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ChangeScene : aEffect {
+namespace PaintProcess {
 	
-	public int newScene;
-	
-	public override void PlayEffect()
-	{
-		base.PlayEffect();
+	public class ChangeScene : aEffect {
 		
-		SceneManager.LoadScene(newScene);
+		public int newScene;
+		
+		public override void PlayEffect()
+		{
+			base.PlayEffect();
+			
+			SceneManager.LoadScene(newScene);
+		}
 	}
+
 }

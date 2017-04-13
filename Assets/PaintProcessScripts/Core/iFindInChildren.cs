@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface iFindInChildren  {
+namespace PaintProcess {
+	
+	public interface iFindInChildren  {
 
-	void FindInChildren();
+		void FindInChildren();
+	}
+
 }
